@@ -366,6 +366,8 @@ endif()
 if (NOT CMAKE_BUILD_TYPE MATCHES "Release")
   list(APPEND CUTLASS_CUDA_CLANG_FLAGS -gmlt)
   list(APPEND CUTLASS_CUDA_NVCC_FLAGS -lineinfo)
+  list(APPEND CUTLASS_CUDA_NVCC_FLAGS -g)
+  # list(APPEND CUTLASS_CUDA_NVCC_FLAGS -G)
 endif()
 
 #Report CUDA build flags

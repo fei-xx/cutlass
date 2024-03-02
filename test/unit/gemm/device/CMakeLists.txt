@@ -342,6 +342,14 @@ cutlass_test_unit_add_executable(
   sm90_gemm_f8_f8_f32_tensor_op_f32_cluster_warpspecialized_cooperative.cu
 )
 cutlass_test_unit_add_executable(
+  cutlass_test_unit_gemm_device_tensorop_fp8_tma
+
+  BATCH_SOURCES ON
+  BATCH_SIZE 4
+
+  sm90_gemm_f8_tma.cu
+)
+cutlass_test_unit_add_executable(
   cutlass_test_unit_gemm_device_tensorop_gmma_rs_warpspecialized_sm90
 
   BATCH_SOURCES ON
